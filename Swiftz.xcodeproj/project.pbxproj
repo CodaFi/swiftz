@@ -11,6 +11,10 @@
 		822A5FC41B4CD9EC00F48B0B /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822A5FC21B4CD9EC00F48B0B /* Operators.swift */; };
 		8249E0281B56E21E000234FE /* Combinators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8249E0271B56E21E000234FE /* Combinators.swift */; };
 		8249E0291B56E21E000234FE /* Combinators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8249E0271B56E21E000234FE /* Combinators.swift */; };
+		8249E02C1B56E308000234FE /* CC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8249E02A1B56E308000234FE /* CC.swift */; };
+		8249E02D1B56E308000234FE /* CC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8249E02A1B56E308000234FE /* CC.swift */; };
+		8249E02E1B56E308000234FE /* DelimitedCC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8249E02B1B56E308000234FE /* DelimitedCC.swift */; };
+		8249E02F1B56E308000234FE /* DelimitedCC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8249E02B1B56E308000234FE /* DelimitedCC.swift */; };
 		826A12F11B3DF9A300547FD4 /* FunctionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826A12F01B3DF9A300547FD4 /* FunctionSpec.swift */; };
 		826A12F21B3DF9A300547FD4 /* FunctionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826A12F01B3DF9A300547FD4 /* FunctionSpec.swift */; };
 		828F7D951B4261A5005EF918 /* UserExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F7D941B4261A5005EF918 /* UserExample.swift */; };
@@ -224,6 +228,8 @@
 /* Begin PBXFileReference section */
 		822A5FC21B4CD9EC00F48B0B /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Carthage/Checkouts/Operadics/Operators.swift; sourceTree = SOURCE_ROOT; };
 		8249E0271B56E21E000234FE /* Combinators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Combinators.swift; path = Carthage/Checkouts/Swiftx/Swiftx/Combinators.swift; sourceTree = SOURCE_ROOT; };
+		8249E02A1B56E308000234FE /* CC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CC.swift; sourceTree = "<group>"; };
+		8249E02B1B56E308000234FE /* DelimitedCC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelimitedCC.swift; sourceTree = "<group>"; };
 		826A12F01B3DF9A300547FD4 /* FunctionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionSpec.swift; sourceTree = "<group>"; };
 		828F7D941B4261A5005EF918 /* UserExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserExample.swift; sourceTree = "<group>"; };
 		82E5A65B1B53666000255137 /* NonEmptyListSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NonEmptyListSpec.swift; sourceTree = "<group>"; };
@@ -438,6 +444,8 @@
 				84A88FE21A71DFC5003D53CF /* Bifunctor.swift */,
 				84A88FE31A71DFC5003D53CF /* Bounded.swift */,
 				84A88FE81A71DFC5003D53CF /* Copointed.swift */,
+				8249E02A1B56E308000234FE /* CC.swift */,
+				8249E02B1B56E308000234FE /* DelimitedCC.swift */,
 				8496F0E61B37571F00896D26 /* Foldable.swift */,
 				84A88FEC1A71DFC5003D53CF /* Function.swift */,
 				84A88FED1A71DFC5003D53CF /* Functor.swift */,
@@ -741,10 +749,12 @@
 				84A8903B1A71DFC5003D53CF /* Those.swift in Sources */,
 				84A8904B1A71DFE5003D53CF /* Error.swift in Sources */,
 				84A890111A71DFC5003D53CF /* Arrow.swift in Sources */,
+				8249E02C1B56E308000234FE /* CC.swift in Sources */,
 				84A890261A71DFC5003D53CF /* JSON.swift in Sources */,
 				822A5FC31B4CD9EC00F48B0B /* Operators.swift in Sources */,
 				84A890271A71DFC5003D53CF /* Kinds.swift in Sources */,
 				84A890501A71DFE5003D53CF /* Result.swift in Sources */,
+				8249E02E1B56E308000234FE /* DelimitedCC.swift in Sources */,
 				84A8903D1A71DFC5003D53CF /* TupleExt.swift in Sources */,
 				84A8902C1A71DFC5003D53CF /* Monoid.swift in Sources */,
 				84A890291A71DFC5003D53CF /* List.swift in Sources */,
@@ -816,10 +826,12 @@
 				84DF75B51B0BD1D400C912B0 /* Bifunctor.swift in Sources */,
 				84DF75B61B0BD1D400C912B0 /* Bounded.swift in Sources */,
 				84DF75B71B0BD1D400C912B0 /* Copointed.swift in Sources */,
+				8249E02D1B56E308000234FE /* CC.swift in Sources */,
 				822A5FC41B4CD9EC00F48B0B /* Operators.swift in Sources */,
 				84DF75B81B0BD1D400C912B0 /* Function.swift in Sources */,
 				84DF75B91B0BD1D400C912B0 /* Functor.swift in Sources */,
 				84DF75BA1B0BD1D400C912B0 /* HList.swift in Sources */,
+				8249E02F1B56E308000234FE /* DelimitedCC.swift in Sources */,
 				84DF75BB1B0BD1D400C912B0 /* JSON.swift in Sources */,
 				84DF75BC1B0BD1D400C912B0 /* JSONKeypath.swift in Sources */,
 				84DF75BD1B0BD1D400C912B0 /* List.swift in Sources */,
