@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		822A5FC31B4CD9EC00F48B0B /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822A5FC21B4CD9EC00F48B0B /* Operators.swift */; };
 		822A5FC41B4CD9EC00F48B0B /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822A5FC21B4CD9EC00F48B0B /* Operators.swift */; };
+		8249E0281B56E21E000234FE /* Combinators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8249E0271B56E21E000234FE /* Combinators.swift */; };
+		8249E0291B56E21E000234FE /* Combinators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8249E0271B56E21E000234FE /* Combinators.swift */; };
 		826A12F11B3DF9A300547FD4 /* FunctionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826A12F01B3DF9A300547FD4 /* FunctionSpec.swift */; };
 		826A12F21B3DF9A300547FD4 /* FunctionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826A12F01B3DF9A300547FD4 /* FunctionSpec.swift */; };
 		828F7D951B4261A5005EF918 /* UserExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F7D941B4261A5005EF918 /* UserExample.swift */; };
@@ -87,7 +89,6 @@
 		84A890481A71DFE5003D53CF /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A8903E1A71DFE5003D53CF /* Array.swift */; };
 		84A8904A1A71DFE5003D53CF /* Either.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A890401A71DFE5003D53CF /* Either.swift */; };
 		84A8904B1A71DFE5003D53CF /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A890411A71DFE5003D53CF /* Error.swift */; };
-		84A8904C1A71DFE5003D53CF /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A890421A71DFE5003D53CF /* Functions.swift */; };
 		84A8904D1A71DFE5003D53CF /* Nothing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A890431A71DFE5003D53CF /* Nothing.swift */; };
 		84A890501A71DFE5003D53CF /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A890461A71DFE5003D53CF /* Result.swift */; };
 		84BB57641AA12D2200214BC5 /* StateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BB57631AA12D2200214BC5 /* StateSpec.swift */; };
@@ -96,7 +97,6 @@
 		84DF759E1B0BD1D400C912B0 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A8903E1A71DFE5003D53CF /* Array.swift */; };
 		84DF75A01B0BD1D400C912B0 /* Either.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A890401A71DFE5003D53CF /* Either.swift */; };
 		84DF75A11B0BD1D400C912B0 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A890411A71DFE5003D53CF /* Error.swift */; };
-		84DF75A21B0BD1D400C912B0 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A890421A71DFE5003D53CF /* Functions.swift */; };
 		84DF75A31B0BD1D400C912B0 /* Nothing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A890431A71DFE5003D53CF /* Nothing.swift */; };
 		84DF75A51B0BD1D400C912B0 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A890461A71DFE5003D53CF /* Result.swift */; };
 		84DF75A61B0BD1D400C912B0 /* Sections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480AB4D1A7B448A00C6162D /* Sections.swift */; };
@@ -223,6 +223,7 @@
 
 /* Begin PBXFileReference section */
 		822A5FC21B4CD9EC00F48B0B /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Carthage/Checkouts/Operadics/Operators.swift; sourceTree = SOURCE_ROOT; };
+		8249E0271B56E21E000234FE /* Combinators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Combinators.swift; path = Carthage/Checkouts/Swiftx/Swiftx/Combinators.swift; sourceTree = SOURCE_ROOT; };
 		826A12F01B3DF9A300547FD4 /* FunctionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionSpec.swift; sourceTree = "<group>"; };
 		828F7D941B4261A5005EF918 /* UserExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserExample.swift; sourceTree = "<group>"; };
 		82E5A65B1B53666000255137 /* NonEmptyListSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NonEmptyListSpec.swift; sourceTree = "<group>"; };
@@ -281,7 +282,6 @@
 		84A8903E1A71DFE5003D53CF /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Array.swift; path = Carthage/Checkouts/Swiftx/Swiftx/Array.swift; sourceTree = SOURCE_ROOT; usesTabs = 1; };
 		84A890401A71DFE5003D53CF /* Either.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Either.swift; path = Carthage/Checkouts/Swiftx/Swiftx/Either.swift; sourceTree = SOURCE_ROOT; usesTabs = 1; };
 		84A890411A71DFE5003D53CF /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Carthage/Checkouts/Swiftx/Swiftx/Error.swift; sourceTree = SOURCE_ROOT; usesTabs = 1; };
-		84A890421A71DFE5003D53CF /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Functions.swift; path = Carthage/Checkouts/Swiftx/Swiftx/Functions.swift; sourceTree = SOURCE_ROOT; usesTabs = 1; };
 		84A890431A71DFE5003D53CF /* Nothing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Nothing.swift; path = Carthage/Checkouts/Swiftx/Swiftx/Nothing.swift; sourceTree = SOURCE_ROOT; usesTabs = 1; };
 		84A890461A71DFE5003D53CF /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Carthage/Checkouts/Swiftx/Swiftx/Result.swift; sourceTree = SOURCE_ROOT; usesTabs = 1; };
 		84BB57631AA12D2200214BC5 /* StateSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateSpec.swift; sourceTree = "<group>"; };
@@ -394,9 +394,9 @@
 			isa = PBXGroup;
 			children = (
 				84A8903E1A71DFE5003D53CF /* Array.swift */,
+				8249E0271B56E21E000234FE /* Combinators.swift */,
 				84A890401A71DFE5003D53CF /* Either.swift */,
 				84A890411A71DFE5003D53CF /* Error.swift */,
-				84A890421A71DFE5003D53CF /* Functions.swift */,
 				84A890431A71DFE5003D53CF /* Nothing.swift */,
 				84A890461A71DFE5003D53CF /* Result.swift */,
 				8480AB4D1A7B448A00C6162D /* Sections.swift */,
@@ -750,7 +750,6 @@
 				84A890291A71DFC5003D53CF /* List.swift in Sources */,
 				84A890121A71DFC5003D53CF /* Bifunctor.swift in Sources */,
 				84A8900F1A71DFC5003D53CF /* ArrayExt.swift in Sources */,
-				84A8904C1A71DFE5003D53CF /* Functions.swift in Sources */,
 				84A890311A71DFC5003D53CF /* Num.swift in Sources */,
 				84A890191A71DFC5003D53CF /* Curry.swift in Sources */,
 				84A8901A1A71DFC5003D53CF /* DictionaryExt.swift in Sources */,
@@ -761,6 +760,7 @@
 				8496F0E71B37571F00896D26 /* Foldable.swift in Sources */,
 				84A890391A71DFC5003D53CF /* StringExt.swift in Sources */,
 				84A8904D1A71DFE5003D53CF /* Nothing.swift in Sources */,
+				8249E0281B56E21E000234FE /* Combinators.swift in Sources */,
 				84A890131A71DFC5003D53CF /* Bounded.swift in Sources */,
 				84A890141A71DFC5003D53CF /* Category.swift in Sources */,
 				84A890481A71DFE5003D53CF /* Array.swift in Sources */,
@@ -804,7 +804,6 @@
 				84EA2C281B1CE70B0001FB3F /* ResultExt.swift in Sources */,
 				84DF75A01B0BD1D400C912B0 /* Either.swift in Sources */,
 				84DF75A11B0BD1D400C912B0 /* Error.swift in Sources */,
-				84DF75A21B0BD1D400C912B0 /* Functions.swift in Sources */,
 				84DF75A31B0BD1D400C912B0 /* Nothing.swift in Sources */,
 				84DF75A51B0BD1D400C912B0 /* Result.swift in Sources */,
 				84DF75A61B0BD1D400C912B0 /* Sections.swift in Sources */,
@@ -836,6 +835,7 @@
 				84DF75C51B0BD1D400C912B0 /* SYB.swift in Sources */,
 				84DF75C61B0BD1D400C912B0 /* Those.swift in Sources */,
 				84DF75C71B0BD1D400C912B0 /* Tuple.swift in Sources */,
+				8249E0291B56E21E000234FE /* Combinators.swift in Sources */,
 				84DF75C81B0BD1D400C912B0 /* ArrayExt.swift in Sources */,
 				84DF75C91B0BD1D400C912B0 /* CharacterExt.swift in Sources */,
 				84DF75CA1B0BD1D400C912B0 /* DictionaryExt.swift in Sources */,
