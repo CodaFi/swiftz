@@ -48,7 +48,7 @@ extension String {
 		} else if self.characters.count == 1 {
 			return .Cons(self[self.startIndex], "")
 		}
-		return .Cons(self[self.startIndex], self[advance(self.startIndex, 1)..<self.endIndex])
+		return .Cons(self[self.startIndex], self[self.startIndex.successor()..<self.endIndex])
 	}
 
 	/// Returns a string containing the characters of the receiver in reverse order.
@@ -146,9 +146,9 @@ extension String {
 }
 
 extension String : Monoid {
-	typealias M = String
+	public typealias M = String
 
-	public static var mzero : String {
+	public static var mempty : String {
 		return ""
 	}
 
@@ -162,9 +162,9 @@ public func <>(l : String, r : String) -> String {
 }
 
 extension String : Functor {
-	typealias A = Character
-	typealias B = Character
-	typealias FB = String
+	public typealias A = Character
+	public typealias B = Character
+	public typealias FB = String
 
 	public func fmap(f : Character -> Character) -> String {
 		return self.map(f)
@@ -182,7 +182,7 @@ extension String : Pointed {
 }
 
 extension String : Applicative {
-	typealias FAB = [Character -> Character]
+	public typealias FAB = [Character -> Character]
 
 	public func ap(a : [Character -> Character]) -> String {
 		return a.map(self.map).reduce("", combine: +)

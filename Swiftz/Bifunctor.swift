@@ -7,6 +7,9 @@
 //
 
 /// A Functor where the first and second arguments are covariant.
+///
+/// FIXME: Something in swiftc doesn't like it when conforming instances use a generic <D> in 
+/// definitions of rightMap.  It has been removed in all instances for now.
 public protocol Bifunctor {
 	typealias L
 	typealias B
@@ -36,12 +39,12 @@ public protocol Bifunctor {
 }
 
 public struct TupleBF<L, R> : Bifunctor {
-	typealias B = Any
-	typealias D = Any
-	typealias PAC = (L, R)
-	typealias PAD = (L, D)
-	typealias PBC = (B, R)
-	typealias PBD = (B, D)
+	public typealias B = Any
+	public typealias D = Any
+	public typealias PAC = (L, R)
+	public typealias PAD = (L, D)
+	public typealias PBC = (B, R)
+	public typealias PBD = (B, D)
 
 	public let t : (L, R)
 	
@@ -57,7 +60,7 @@ public struct TupleBF<L, R> : Bifunctor {
 		return self.bimap(f, identity)
 	}
 
-	public func rightMap<D>(g : R -> D) -> (L, D) {
+	public func rightMap(g : R -> D) -> (L, D) {
 		return self.bimap(identity, g)
 	}
 }

@@ -7,12 +7,12 @@
 //
 
 extension Either : Bifunctor {
-	typealias B = Any
-	typealias D = Any
-	typealias PAC = Either<L, R>
-	typealias PAD = Either<L, D>
-	typealias PBC = Either<B, R>
-	typealias PBD = Either<B, D>
+	public typealias B = Any
+	public typealias D = Any
+	public typealias PAC = Either<L, R>
+	public typealias PAD = Either<L, D>
+	public typealias PBC = Either<B, R>
+	public typealias PBD = Either<B, D>
 
 	public func bimap<B, D>(f : L -> B, _ g : (R -> D)) -> Either<B, D> {
 		switch self {
@@ -27,13 +27,13 @@ extension Either : Bifunctor {
 		return self.bimap(f, identity)
 	}
 
-	public func rightMap<D>(g : R -> D) -> Either<L, D> {
+	public func rightMap(g : R -> D) -> Either<L, D> {
 		return self.bimap(identity, g)
 	}
 }
 
 extension Either : Functor {
-	typealias FB = Either<L, B>
+	public typealias FB = Either<L, B>
 
 	public func fmap<B>(f : R -> B) -> Either<L, B> {
 		return f <^> self
@@ -41,15 +41,15 @@ extension Either : Functor {
 }
 
 extension Either : Pointed {
-	typealias A = R
+	public typealias A = R
 
 	public static func pure(r : R) -> Either<L, R> {
-		return Either.Right(r)
+		return .Right(r)
 	}
 }
 
 extension Either : Applicative {
-	typealias FAB = Either<L, R -> B>
+	public typealias FAB = Either<L, R -> B>
 
 	public func ap<B>(f : Either<L, R -> B>) -> Either<L, B> {
 		return f <*> self
@@ -84,7 +84,7 @@ extension Either : Foldable {
 	public func foldMap<M : Monoid>(f : A -> M) -> M {
 		switch self {
 		case .Left(_):
-			return M.mzero
+			return M.mempty
 		case .Right(let y):
 			return f(y)
 		}

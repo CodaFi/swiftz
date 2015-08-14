@@ -14,9 +14,9 @@ public enum ArrayMatcher<A> {
 }
 
 extension Array : Functor {
-	typealias A = Element
-	typealias B = Any
-	typealias FB = Array<B>
+	public typealias A = Element
+	public typealias B = Any
+	public typealias FB = Array<B>
 
 	public func fmap<B>(f : A -> B) -> [B] {
 		return self.map(f)
@@ -30,7 +30,7 @@ extension Array : Pointed {
 }
 
 extension Array : Applicative {
-	typealias FAB = Array<A -> B>
+	public typealias FAB = Array<A -> B>
 
 	public func ap<B>(f : [A -> B]) -> [B] {
 		return f <*> self
@@ -58,7 +58,7 @@ extension Array : Foldable {
 	}
 
 	public func foldMap<M : Monoid>(f : A -> M) -> M {
-		return self.foldr(curry(<>) • f, M.mzero)
+		return self.foldr(curry(<>) • f, M.mempty)
 	}
 }
 
@@ -154,18 +154,13 @@ extension Array {
 
 	/// Maps a function over an array that takes pairs of (index, element) to a different element.
 	public func mapWithIndex<U>(f : (Int, Element) -> U) -> [U] {
-		var res = [U]()
-		res.reserveCapacity(self.count)
-		for i in 0 ..< self.count {
-			res.append(f(i, self[i]))
-		}
-		return res
+		return zip((self.startIndex ..< self.endIndex), self).map(f)
 	}
 
 	public func mapMaybe<U>(f : Element -> Optional<U>) -> [U] {
 		var res = [U]()
 		res.reserveCapacity(self.count)
-		for x in self {
+		self.forEach { x in
 			if let v = f(x) {
 				res.append(v)
 			}
@@ -230,11 +225,11 @@ extension Array {
 	public func intersperse(item : Element) -> [Element] {
 		func prependAll(item : Element, array : [Element]) -> [Element] {
 			var arr = Array([item])
-			for i in 0..<(array.count - 1) {
+			for i in array.startIndex..<array.endIndex.predecessor() {
 				arr.append(array[i])
 				arr.append(item)
 			}
-			arr.append(array[array.count - 1])
+			arr.append(array[array.endIndex.predecessor()])
 			return arr
 		}
 
