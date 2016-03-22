@@ -58,6 +58,44 @@ public struct Product<N : NumericType> : Monoid {
 	}
 }
 
+/// The monoid of booleans under conjunction
+public struct All {
+	public let getAll : Bool
+	
+	public init(_ val : Bool) {
+		self.getAll = val
+	}
+}
+
+extension All : Monoid {
+	public static var mempty : All {
+		return All(true)
+	}
+
+	public func op(r : All) -> All {
+		return All(self.getAll && r.getAll)
+	}
+}
+
+/// The monoid of booleans under disjunction
+public struct Any {
+	public let getAny : Bool
+	
+	public init(_ val : Bool) {
+		self.getAny = val
+	}
+}
+
+extension Any : Monoid {
+	public static var mempty : Any {
+		return Any(false)
+	}
+	
+	public func op(r : Any) -> Any {
+		return Any(self.getAny || r.getAny)
+	}
+}
+
 /// The `Semigroup`-lifting `Optional` `Monoid`
 public struct AdjoinNil<A : Semigroup> : Monoid {
 	public let value : () -> Optional<A>

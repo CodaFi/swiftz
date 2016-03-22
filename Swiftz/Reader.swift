@@ -68,7 +68,8 @@ extension Reader : Applicative {
     public typealias FAB = Reader<R, A -> B>
     
     public func ap(r : Reader<R, A -> B>) -> Reader<R, B> {
-        return Reader<R, B>(runReader)
+//        return Reader<R, B>(runReader)
+			fatalError()
     }
 }
 

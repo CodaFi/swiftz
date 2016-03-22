@@ -15,6 +15,10 @@
 		821B76C51BC43DF000AF97D6 /* SwiftCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821B76BC1BC43DE100AF97D6 /* SwiftCheck.framework */; };
 		821B76C81BC43DF900AF97D6 /* SwiftCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821B76BC1BC43DE100AF97D6 /* SwiftCheck.framework */; };
 		821B76C91BC4402700AF97D6 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821B76AF1BC43C1000AF97D6 /* Operators.swift */; };
+		821DA7E11C44733B00769FFA /* MonoFunctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821DA7E01C44733B00769FFA /* MonoFunctor.swift */; };
+		821DA7E21C44733F00769FFA /* MonoFunctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821DA7E01C44733B00769FFA /* MonoFunctor.swift */; };
+		821DA7E31C44734000769FFA /* MonoFunctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821DA7E01C44733B00769FFA /* MonoFunctor.swift */; };
+		821DA7E41C44734000769FFA /* MonoFunctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821DA7E01C44733B00769FFA /* MonoFunctor.swift */; };
 		8240CD261C3A396000EF4D29 /* Swiftz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8240CD1C1C3A395F00EF4D29 /* Swiftz.framework */; };
 		8240CD331C3A397800EF4D29 /* Kinds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A88FF71A71DFC5003D53CF /* Kinds.swift */; };
 		8240CD341C3A397800EF4D29 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821B76AF1BC43C1000AF97D6 /* Operators.swift */; };
@@ -389,6 +393,7 @@
 		8202480E1C1BA8F60020B7EF /* UnitSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitSpec.swift; sourceTree = "<group>"; };
 		821B76AF1BC43C1000AF97D6 /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Carthage/Checkouts/Operadics/Operators.swift; sourceTree = SOURCE_ROOT; };
 		821B76B41BC43DE100AF97D6 /* SwiftCheck.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftCheck.xcodeproj; path = Carthage/Checkouts/SwiftCheck/SwiftCheck.xcodeproj; sourceTree = SOURCE_ROOT; };
+		821DA7E01C44733B00769FFA /* MonoFunctor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonoFunctor.swift; sourceTree = "<group>"; };
 		8240CD1C1C3A395F00EF4D29 /* Swiftz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swiftz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8240CD251C3A396000EF4D29 /* Swiftz-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swiftz-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8240CDD81C3A41F000EF4D29 /* Swiftz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swiftz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -538,6 +543,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		821DA7DC1C44731D00769FFA /* Mono */ = {
+			isa = PBXGroup;
+			children = (
+				821DA7E01C44733B00769FFA /* MonoFunctor.swift */,
+			);
+			name = Mono;
+			sourceTree = "<group>";
+		};
 		84A88F8E1A71DF7F003D53CF = {
 			isa = PBXGroup;
 			children = (
@@ -620,6 +633,7 @@
 		84A890541A71E170003D53CF /* Control */ = {
 			isa = PBXGroup;
 			children = (
+				821DA7DC1C44731D00769FFA /* Mono */,
 				84A88FDE1A71DFC5003D53CF /* Applicative.swift */,
 				84A88FE11A71DFC5003D53CF /* Arrow.swift */,
 				84A88FE41A71DFC5003D53CF /* Category.swift */,
@@ -1082,6 +1096,7 @@
 				8240CD561C3A397800EF4D29 /* SYB.swift in Sources */,
 				8240CD571C3A397800EF4D29 /* Those.swift in Sources */,
 				8240CD581C3A397800EF4D29 /* (null) in Sources */,
+				821DA7E31C44734000769FFA /* MonoFunctor.swift in Sources */,
 				8240CD591C3A397800EF4D29 /* Unit.swift in Sources */,
 				8240CD5A1C3A397800EF4D29 /* Writer.swift in Sources */,
 				8240CD5B1C3A397800EF4D29 /* Reader.swift in Sources */,
@@ -1146,6 +1161,7 @@
 				8240CDFA1C3A425C00EF4D29 /* Bounded.swift in Sources */,
 				8240CDFB1C3A425C00EF4D29 /* Const.swift in Sources */,
 				8240CDFC1C3A425C00EF4D29 /* Copointed.swift in Sources */,
+				821DA7E41C44734000769FFA /* MonoFunctor.swift in Sources */,
 				8240CDFD1C3A425C00EF4D29 /* Foldable.swift in Sources */,
 				8240CDFE1C3A425C00EF4D29 /* Function.swift in Sources */,
 				8240CDFF1C3A425C00EF4D29 /* Functor.swift in Sources */,
@@ -1201,6 +1217,7 @@
 				82F3175E1B805EA7007B80E2 /* ArrowExt.swift in Sources */,
 				84A8904B1A71DFE5003D53CF /* Error.swift in Sources */,
 				825C0E541B859D020026E738 /* Identity.swift in Sources */,
+				821DA7E11C44733B00769FFA /* MonoFunctor.swift in Sources */,
 				84A890111A71DFC5003D53CF /* Arrow.swift in Sources */,
 				8202480A1C1BA8A50020B7EF /* Unit.swift in Sources */,
 				84A890271A71DFC5003D53CF /* Kinds.swift in Sources */,
@@ -1283,6 +1300,7 @@
 				84DF75B61B0BD1D400C912B0 /* Bounded.swift in Sources */,
 				82F3175F1B805EA7007B80E2 /* ArrowExt.swift in Sources */,
 				84DF75B71B0BD1D400C912B0 /* Copointed.swift in Sources */,
+				821DA7E21C44733F00769FFA /* MonoFunctor.swift in Sources */,
 				825C0E551B859D020026E738 /* Identity.swift in Sources */,
 				84DF75B81B0BD1D400C912B0 /* Function.swift in Sources */,
 				8202480B1C1BA8A50020B7EF /* Unit.swift in Sources */,
